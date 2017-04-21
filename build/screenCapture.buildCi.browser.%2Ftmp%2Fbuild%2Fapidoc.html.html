@@ -1,0 +1,1831 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/don/BluetoothSerial#readme">cordova-plugin-bluetooth-serial (v0.4.7)</a>
+</h1>
+<h4>Bluetooth Serial Communication Plugin</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cordova-plugin-bluetooth-serial">module cordova-plugin-bluetooth-serial</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.available">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>available
+            <span class="apidocSignatureSpan">(success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.clear">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>clear
+            <span class="apidocSignatureSpan">(success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.clearDeviceDiscoveredListener">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>clearDeviceDiscoveredListener
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.connect">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>connect
+            <span class="apidocSignatureSpan">(macAddress, success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.connectInsecure">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>connectInsecure
+            <span class="apidocSignatureSpan">(macAddress, success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.disconnect">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>disconnect
+            <span class="apidocSignatureSpan">(success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.discoverUnpaired">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>discoverUnpaired
+            <span class="apidocSignatureSpan">(success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.enable">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>enable
+            <span class="apidocSignatureSpan">(success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.isConnected">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>isConnected
+            <span class="apidocSignatureSpan">(success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.isEnabled">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>isEnabled
+            <span class="apidocSignatureSpan">(success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.list">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>list
+            <span class="apidocSignatureSpan">(success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.read">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>read
+            <span class="apidocSignatureSpan">(success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.readRSSI">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>readRSSI
+            <span class="apidocSignatureSpan">(success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.readUntil">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>readUntil
+            <span class="apidocSignatureSpan">(delimiter, success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.setDeviceDiscoveredListener">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>setDeviceDiscoveredListener
+            <span class="apidocSignatureSpan">(notify)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.setDiscoverable">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>setDiscoverable
+            <span class="apidocSignatureSpan">(discoverableDuration)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.setName">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>setName
+            <span class="apidocSignatureSpan">(newName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.showBluetoothSettings">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>showBluetoothSettings
+            <span class="apidocSignatureSpan">(success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.subscribe">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>subscribe
+            <span class="apidocSignatureSpan">(delimiter, success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.subscribeRawData">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>subscribeRawData
+            <span class="apidocSignatureSpan">(success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.unsubscribe">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>unsubscribe
+            <span class="apidocSignatureSpan">(success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.unsubscribeRawData">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>unsubscribeRawData
+            <span class="apidocSignatureSpan">(success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.write">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>write
+            <span class="apidocSignatureSpan">(data, success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>bluetoothSerial</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cordova-plugin-bluetooth-serial.bluetoothSerial">module cordova-plugin-bluetooth-serial.bluetoothSerial</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.available">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>available
+            <span class="apidocSignatureSpan">(success_cb, fail_cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.clear">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>clear
+            <span class="apidocSignatureSpan">(success_cb, fail_cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.connect">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>connect
+            <span class="apidocSignatureSpan">(mac, success_cb, fail_cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.disconnect">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>disconnect
+            <span class="apidocSignatureSpan">(success_cb, fail_cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.discoverUnpaired">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>discoverUnpaired
+            <span class="apidocSignatureSpan">(success_cb, fail_cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.enable">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>enable
+            <span class="apidocSignatureSpan">(success_cb, fail_cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.isConnected">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>isConnected
+            <span class="apidocSignatureSpan">(success_cb, fail_cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.isEnabled">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>isEnabled
+            <span class="apidocSignatureSpan">(success_cb, fail_cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.list">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>list
+            <span class="apidocSignatureSpan">(success_cb, fail_cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.read">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>read
+            <span class="apidocSignatureSpan">(success_cb, fail_cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.readRSSI">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>readRSSI
+            <span class="apidocSignatureSpan">(success_cb, fail_cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.readUntil">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>readUntil
+            <span class="apidocSignatureSpan">(delimiter, success_cb, fail_cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.register">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>register
+            <span class="apidocSignatureSpan">(data_cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.showBluetoothSettings">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>showBluetoothSettings
+            <span class="apidocSignatureSpan">(success_cb, fail_cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.subscribe">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>subscribe
+            <span class="apidocSignatureSpan">(delimiter, success_cb, fail_cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.subscribeRawData">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>subscribeRawData
+            <span class="apidocSignatureSpan">(success_cb, fail_cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.unsubscribe">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>unsubscribe
+            <span class="apidocSignatureSpan">(success_cb, fail_cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.unsubscribeRawData">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>unsubscribeRawData
+            <span class="apidocSignatureSpan">(success_cb, fail_cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.write">
+            function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>write
+            <span class="apidocSignatureSpan">(data, success_cb, fail_cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cordova-plugin-bluetooth-serial" id="apidoc.module.cordova-plugin-bluetooth-serial">module cordova-plugin-bluetooth-serial</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.available" id="apidoc.element.cordova-plugin-bluetooth-serial.available">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>available
+        <span class="apidocSignatureSpan">(success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">available = function (success, failure) {
+    cordova.exec(success, failure, "BluetoothSerial", "available", []);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    // Array Buffer
+    bluetoothSerial.write(data.buffer, success, failure);
+
+## available
+
+Gets the number of bytes of data available.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">available</span>(success, failure);
+
+### Description
+
+Function `available` gets the number of bytes of data available.  The bytes are passed as a parameter to the success callback.
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.clear" id="apidoc.element.cordova-plugin-bluetooth-serial.clear">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>clear
+        <span class="apidocSignatureSpan">(success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clear = function (success, failure) {
+    cordova.exec(success, failure, "BluetoothSerial", "clear", []);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    bluetoothSerial.unsubscribeRawData();
+
+## clear
+
+Clears data in the buffer.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">clear</span>(success, failure);
+
+### Description
+
+Function `clear` removes any data from the receive buffer.
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.clearDeviceDiscoveredListener" id="apidoc.element.cordova-plugin-bluetooth-serial.clearDeviceDiscoveredListener">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>clearDeviceDiscoveredListener
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clearDeviceDiscoveredListener = function () {
+    cordova.exec(null, null, "BluetoothSerial", "clearDeviceDiscoveredListener", []);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+## clearDeviceDiscoveredListener
+
+Clears notify callback function registered with [setDeviceDiscoveredListener](#setdevicediscoveredlistener).
+
+### Quick Example
+
+bluetoothSerial.<span class="apidocCodeKeywordSpan">clearDeviceDiscoveredListener</span>();
+
+## setName
+
+Sets the human readable device name that is broadcasted to other devices.
+
+bluetoothSerial.setName(newName);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.connect" id="apidoc.element.cordova-plugin-bluetooth-serial.connect">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>connect
+        <span class="apidocSignatureSpan">(macAddress, success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">connect = function (macAddress, success, failure) {
+    cordova.exec(success, failure, "BluetoothSerial", "connect", [macAddress]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- [bluetoothSerial.setName](#setname)
+- [bluetoothSerial.setDiscoverable](#setdiscoverable)
+
+## connect
+
+Connect to a Bluetooth device.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">connect</span>(macAddress_or_uuid, connectSuccess, connectFailure);
+
+### Description
+
+Function `connect` connects to a Bluetooth device.  The callback is long running.  Success will be called when the connection is
+ successful.  Failure is called if the connection fails, or later if the connection disconnects. An error message is passed to the
+ failure callback.
+
+#### Android
+For Android, `connect` takes a MAC address of the remote device.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.connectInsecure" id="apidoc.element.cordova-plugin-bluetooth-serial.connectInsecure">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>connectInsecure
+        <span class="apidocSignatureSpan">(macAddress, success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">connectInsecure = function (macAddress, success, failure) {
+    cordova.exec(success, failure, "BluetoothSerial", "connectInsecure", [macAddress]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- __connectSuccess__: Success callback function that is invoked when the connection is successful.
+- __connectFailure__: Error callback function, invoked when error occurs or the connection disconnects.
+
+## connectInsecure
+
+Connect insecurely to a Bluetooth device.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">connectInsecure</span>(macAddress, connectSuccess, connectFailure);
+
+### Description
+
+Function `connectInsecure` works like [connect](#connect), but creates an insecure connection to a Bluetooth device.  See the [Android
+ docs](http://goo.gl/1mFjZY) for more information.
+
+#### Android
+For Android, `connectInsecure` takes a macAddress of the remote device.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.disconnect" id="apidoc.element.cordova-plugin-bluetooth-serial.disconnect">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>disconnect
+        <span class="apidocSignatureSpan">(success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">disconnect = function (success, failure) {
+    cordova.exec(success, failure, "BluetoothSerial", "disconnect", []);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- __connectFailure__: Error callback function, invoked when error occurs or the connection disconnects.
+
+
+## disconnect
+
+Disconnect.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">disconnect</span>([success], [failure]);
+
+### Description
+
+Function `disconnect` disconnects the current connection.
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.discoverUnpaired" id="apidoc.element.cordova-plugin-bluetooth-serial.discoverUnpaired">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>discoverUnpaired
+        <span class="apidocSignatureSpan">(success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">discoverUnpaired = function (success, failure) {
+    cordova.exec(success, failure, "BluetoothSerial", "discoverUnpaired", []);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        }
+    );
+
+## discoverUnpaired
+
+Discover unpaired devices
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">discoverUnpaired</span>(success, failure);
+
+### Description
+
+#### Android
+
+Function `discoverUnpaired` discovers unpaired Bluetooth devices. The success callback is called with a list of objects similar
+to `list`, or an empty list if no unpaired devices are found.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.enable" id="apidoc.element.cordova-plugin-bluetooth-serial.enable">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>enable
+        <span class="apidocSignatureSpan">(success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">enable = function (success, failure) {
+    cordova.exec(success, failure, "BluetoothSerial", "enable", []);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    bluetoothSerial.showBluetoothSettings();
+
+## enable
+
+Enable Bluetooth on the device.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">enable</span>(success, failure);
+
+### Description
+
+Function `enable` prompts the user to enable Bluetooth.
+
+#### Android
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.isConnected" id="apidoc.element.cordova-plugin-bluetooth-serial.isConnected">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>isConnected
+        <span class="apidocSignatureSpan">(success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isConnected = function (success, failure) {
+    cordova.exec(success, failure, "BluetoothSerial", "isConnected", []);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        })
+    }, failure);
+
+## isConnected
+
+Reports the connection status.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">isConnected</span>(success, failure);
+
+### Description
+
+Function `isConnected` calls the success callback when connected to a peer and the failure callback when *not* connected.
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.isEnabled" id="apidoc.element.cordova-plugin-bluetooth-serial.isEnabled">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>isEnabled
+        <span class="apidocSignatureSpan">(success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isEnabled = function (success, failure) {
+    cordova.exec(success, failure, "BluetoothSerial", "isEnabled", []);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        }
+    );
+
+## isEnabled
+
+Reports if bluetooth is enabled.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">isEnabled</span>(success, failure);
+
+### Description
+
+Function `isEnabled` calls the success callback when bluetooth is enabled and the failure callback when bluetooth is *not* enabled
+.
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.list" id="apidoc.element.cordova-plugin-bluetooth-serial.list">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>list
+        <span class="apidocSignatureSpan">(success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">list = function (success, failure) {
+    cordova.exec(success, failure, "BluetoothSerial", "list", []);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- __success__: Success callback function that is invoked when the connection is successful. [optional]
+- __failure__: Error callback function, invoked when error occurs. [optional]
+
+## list
+
+Lists bonded devices
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">list</span>(success, failure);
+
+### Description
+
+#### Android
+
+Function `list` lists the paired Bluetooth devices.  The success callback is called with a list of objects.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.read" id="apidoc.element.cordova-plugin-bluetooth-serial.read">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>read
+        <span class="apidocSignatureSpan">(success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">read = function (success, failure) {
+    cordova.exec(success, failure, "BluetoothSerial", "read", []);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        console.log("There are " + numBytes + " available to read.");
+    }, failure);
+
+## read
+
+Reads data from the buffer.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">read</span>(success, failure);
+
+### Description
+
+Function `read` reads the data from the buffer. The data is passed to the success callback as a String.  Calling `read` when no
+data is available will pass an empty String to the callback.
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.readRSSI" id="apidoc.element.cordova-plugin-bluetooth-serial.readRSSI">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>readRSSI
+        <span class="apidocSignatureSpan">(success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readRSSI = function (success, failure) {
+    cordova.exec(success, failure, "BluetoothSerial", "readRSSI", []);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        }
+    );
+
+## readRSSI
+
+Reads the RSSI from the connected peripheral.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">readRSSI</span>(success, failure);
+
+### Description
+
+Function `readRSSI` calls the success callback with the rssi.
+
+**BLE only** *This function is experimental and the API may change*
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.readUntil" id="apidoc.element.cordova-plugin-bluetooth-serial.readUntil">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>readUntil
+        <span class="apidocSignatureSpan">(delimiter, success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readUntil = function (delimiter, success, failure) {
+    cordova.exec(success, failure, "BluetoothSerial", "readUntil", [delimiter]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        console.log(data);
+    }, failure);
+
+## readUntil
+
+Reads data from the buffer until it reaches a delimiter.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">readUntil</span>('\n', success, failure);
+
+### Description
+
+Function `readUntil` reads the data from the buffer until it reaches a delimiter.  The data is passed to the success callback as
+ a String.  If the buffer does not contain the delimiter, an empty String is passed to the callback. Calling `read` when no data
+ is available will pass an empty String to the callback.
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.setDeviceDiscoveredListener" id="apidoc.element.cordova-plugin-bluetooth-serial.setDeviceDiscoveredListener">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>setDeviceDiscoveredListener
+        <span class="apidocSignatureSpan">(notify)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setDeviceDiscoveredListener = function (notify) {
+    if (typeof notify != 'function')
+        throw 'BluetoothSerial.setDeviceDiscoveredListener: Callback not a function';
+
+    cordova.exec(notify, null, "BluetoothSerial", "setDeviceDiscoveredListener", []);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### Parameters
+
+- __notify__: Notify callback function that is invoked when device is discovered during discovery process.
+
+### Quick Example
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">setDeviceDiscoveredListener</span>(function(device) {
+		console.log('Found: '+device.id);
+    });
+
+## clearDeviceDiscoveredListener
+
+Clears notify callback function registered with [setDeviceDiscoveredListener](#setdevicediscoveredlistener).
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.setDiscoverable" id="apidoc.element.cordova-plugin-bluetooth-serial.setDiscoverable">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>setDiscoverable
+        <span class="apidocSignatureSpan">(discoverableDuration)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setDiscoverable = function (discoverableDuration) {
+    cordova.exec(null, null, "BluetoothSerial", "setDiscoverable", [discoverableDuration]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    bluetoothSerial.setName("Really cool name");
+
+## setDiscoverable
+
+Makes the device discoverable by other devices.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">setDiscoverable</span>(discoverableDuration);
+
+#### Android
+For Android, `setDiscoverable` takes an int for the number of seconds device should be discoverable. A time of 0 will make it permanently
+ discoverable.
+
+#### iOS
+Not currently implemented.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.setName" id="apidoc.element.cordova-plugin-bluetooth-serial.setName">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>setName
+        <span class="apidocSignatureSpan">(newName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setName = function (newName) {
+    cordova.exec(null, null, "BluetoothSerial", "setName", [newName]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    bluetoothSerial.clearDeviceDiscoveredListener();
+
+## setName
+
+Sets the human readable device name that is broadcasted to other devices.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">setName</span>(newName);
+
+#### Android
+For Android, `setName` takes a String for the new name.
+
+#### iOS
+Not currently implemented.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.showBluetoothSettings" id="apidoc.element.cordova-plugin-bluetooth-serial.showBluetoothSettings">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>showBluetoothSettings
+        <span class="apidocSignatureSpan">(success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">showBluetoothSettings = function (success, failure) {
+    cordova.exec(success, failure, "BluetoothSerial", "showBluetoothSettings", []);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        }
+    );
+
+## showBluetoothSettings
+
+Show the Bluetooth settings on the device.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">showBluetoothSettings</span>(success, failure);
+
+### Description
+
+Function `showBluetoothSettings` opens the Bluetooth settings on the operating systems.
+
+#### iOS
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.subscribe" id="apidoc.element.cordova-plugin-bluetooth-serial.subscribe">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>subscribe
+        <span class="apidocSignatureSpan">(delimiter, success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">subscribe = function (delimiter, success, failure) {
+    cordova.exec(success, failure, "BluetoothSerial", "subscribe", [delimiter]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        console.log(data);
+    }, failure);
+
+## subscribe
+
+Subscribe to be notified when data is received.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">subscribe</span>('\n', success, failure);
+
+### Description
+
+Function `subscribe` registers a callback that is called when data is received.  A delimiter must be specified.  The callback is
+ called with the data as soon as the delimiter string is read.  The callback is a long running callback and will exist until `unsubscribe
+` is called.
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.subscribeRawData" id="apidoc.element.cordova-plugin-bluetooth-serial.subscribeRawData">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>subscribeRawData
+        <span class="apidocSignatureSpan">(success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">subscribeRawData = function (success, failure) {
+
+    successWrapper = function(data) {
+        // Windows Phone flattens an array of one into a number which
+        // breaks the API. Stuff it back into an ArrayBuffer.
+        if (typeof data === 'number') {
+            var a = new Uint8Array(1);
+            a[0] = data;
+            data = a.buffer;
+        }
+        success(data);
+    };
+    cordova.exec(successWrapper, failure, "BluetoothSerial", "subscribeRaw", []);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    bluetoothSerial.unsubscribe();
+
+## subscribeRawData
+
+Subscribe to be notified when data is received.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">subscribeRawData</span>(success, failure);
+
+### Description
+
+Function `subscribeRawData` registers a callback that is called when data is received. The callback is called immediately when data
+ is received. The data is sent to callback as an ArrayBuffer. The callback is a long running callback and will exist until `unsubscribeRawData
+` is called.
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.unsubscribe" id="apidoc.element.cordova-plugin-bluetooth-serial.unsubscribe">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>unsubscribe
+        <span class="apidocSignatureSpan">(success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unsubscribe = function (success, failure) {
+    cordova.exec(success, failure, "BluetoothSerial", "unsubscribe", []);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        console.log(data);
+    }, failure);
+
+## unsubscribe
+
+Unsubscribe from a subscription.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">unsubscribe</span>(success, failure);
+
+### Description
+
+Function `unsubscribe` removes any notification added by `subscribe` and kills the callback.
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.unsubscribeRawData" id="apidoc.element.cordova-plugin-bluetooth-serial.unsubscribeRawData">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>unsubscribeRawData
+        <span class="apidocSignatureSpan">(success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unsubscribeRawData = function (success, failure) {
+    cordova.exec(success, failure, "BluetoothSerial", "unsubscribeRaw", []);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        console.log(bytes);
+    }, failure);
+
+## unsubscribeRawData
+
+Unsubscribe from a subscription.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">unsubscribeRawData</span>(success, failure);
+
+### Description
+
+Function `unsubscribeRawData` removes any notification added by `subscribeRawData` and kills the callback.
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.write" id="apidoc.element.cordova-plugin-bluetooth-serial.write">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.</span>write
+        <span class="apidocSignatureSpan">(data, success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">write = function (data, success, failure) {
+
+    // convert to ArrayBuffer
+    if (typeof data === 'string') {
+        data = stringToArrayBuffer(data);
+    } else if (data instanceof Array) {
+        // assuming array of interger
+        data = new Uint8Array(data).buffer;
+    } else if (data instanceof Uint8Array) {
+        data = data.buffer;
+    }
+
+    cordova.exec(success, failure, "BluetoothSerial", "write", [data]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- __success__: Success callback function that is invoked after the connection is disconnected. [optional]
+- __failure__: Error callback function, invoked when error occurs. [optional]
+
+## write
+
+Writes data to the serial port.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">write</span>(data, success, failure);
+
+### Description
+
+Function `write` data to the serial port. Data can be an ArrayBuffer, string, array of integers, or a Uint8Array.
+
+Internally string, integer array, and Uint8Array are converted to an ArrayBuffer. String conversion assume 8bit characters.
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cordova-plugin-bluetooth-serial.bluetoothSerial" id="apidoc.module.cordova-plugin-bluetooth-serial.bluetoothSerial">module cordova-plugin-bluetooth-serial.bluetoothSerial</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.available" id="apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.available">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>available
+        <span class="apidocSignatureSpan">(success_cb, fail_cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">available = function (success_cb, fail_cb) {
+    btlog("bluetoothSerial.available");
+    success_cb(buf.output.length);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    // Array Buffer
+    bluetoothSerial.write(data.buffer, success, failure);
+
+## available
+
+Gets the number of bytes of data available.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">available</span>(success, failure);
+
+### Description
+
+Function `available` gets the number of bytes of data available.  The bytes are passed as a parameter to the success callback.
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.clear" id="apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.clear">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>clear
+        <span class="apidocSignatureSpan">(success_cb, fail_cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clear = function (success_cb, fail_cb) {
+    btlog("bluetoothSerial.clear");
+    buf.output = "";
+    if(success_cb) { success_cb(); }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    bluetoothSerial.unsubscribeRawData();
+
+## clear
+
+Clears data in the buffer.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">clear</span>(success, failure);
+
+### Description
+
+Function `clear` removes any data from the receive buffer.
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.connect" id="apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.connect">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>connect
+        <span class="apidocSignatureSpan">(mac, success_cb, fail_cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">connect = function (mac, success_cb, fail_cb) {
+    btlog("bluetoothSerial.connect: " + mac);
+    connected = true;
+    if (success_cb) { success_cb(); }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- [bluetoothSerial.setName](#setname)
+- [bluetoothSerial.setDiscoverable](#setdiscoverable)
+
+## connect
+
+Connect to a Bluetooth device.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">connect</span>(macAddress_or_uuid, connectSuccess, connectFailure);
+
+### Description
+
+Function `connect` connects to a Bluetooth device.  The callback is long running.  Success will be called when the connection is
+ successful.  Failure is called if the connection fails, or later if the connection disconnects. An error message is passed to the
+ failure callback.
+
+#### Android
+For Android, `connect` takes a MAC address of the remote device.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.disconnect" id="apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.disconnect">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>disconnect
+        <span class="apidocSignatureSpan">(success_cb, fail_cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">disconnect = function (success_cb, fail_cb) {
+    btlog("bluetoothSerial.disconnect");
+    connected = false;
+    window.clearInterval(interval);
+    if (success_cb) { success_cb(); }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- __connectFailure__: Error callback function, invoked when error occurs or the connection disconnects.
+
+
+## disconnect
+
+Disconnect.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">disconnect</span>([success], [failure]);
+
+### Description
+
+Function `disconnect` disconnects the current connection.
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.discoverUnpaired" id="apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.discoverUnpaired">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>discoverUnpaired
+        <span class="apidocSignatureSpan">(success_cb, fail_cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">discoverUnpaired = function (success_cb, fail_cb) {
+    alert("bluetoothSerial.discoverUnpaired is not implemented");
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        }
+    );
+
+## discoverUnpaired
+
+Discover unpaired devices
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">discoverUnpaired</span>(success, failure);
+
+### Description
+
+#### Android
+
+Function `discoverUnpaired` discovers unpaired Bluetooth devices. The success callback is called with a list of objects similar
+to `list`, or an empty list if no unpaired devices are found.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.enable" id="apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.enable">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>enable
+        <span class="apidocSignatureSpan">(success_cb, fail_cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">enable = function (success_cb, fail_cb) {
+    btlog("bluetoothSerial.enable");
+    enable = true;
+    if(success_cb) { success_cb(); }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    bluetoothSerial.showBluetoothSettings();
+
+## enable
+
+Enable Bluetooth on the device.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">enable</span>(success, failure);
+
+### Description
+
+Function `enable` prompts the user to enable Bluetooth.
+
+#### Android
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.isConnected" id="apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.isConnected">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>isConnected
+        <span class="apidocSignatureSpan">(success_cb, fail_cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isConnected = function (success_cb, fail_cb) {
+    btlog("bluetoothSerial.isConnected: " + connected);
+    if(connected) {
+        if(success_cb) { success_cb(); }
+    } else {
+        if(fail_cb) { fail_cb(); }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        })
+    }, failure);
+
+## isConnected
+
+Reports the connection status.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">isConnected</span>(success, failure);
+
+### Description
+
+Function `isConnected` calls the success callback when connected to a peer and the failure callback when *not* connected.
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.isEnabled" id="apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.isEnabled">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>isEnabled
+        <span class="apidocSignatureSpan">(success_cb, fail_cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isEnabled = function (success_cb, fail_cb) {
+    btlog("bluetoothSerial.isEnabled: " + enabled);
+    if(enabled) {
+        if(success_cb) { success_cb(); }
+    } else {
+        if(fail_cb) { fail_cb(); }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        }
+    );
+
+## isEnabled
+
+Reports if bluetooth is enabled.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">isEnabled</span>(success, failure);
+
+### Description
+
+Function `isEnabled` calls the success callback when bluetooth is enabled and the failure callback when bluetooth is *not* enabled
+.
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.list" id="apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.list">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>list
+        <span class="apidocSignatureSpan">(success_cb, fail_cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">list = function (success_cb, fail_cb) {
+var devices = [{
+    "class": 276,
+    "id": "10:BF:48:CB:00:00",
+    "address": "10:BF:48:CB:00:00",
+    "name": "Nexus 7"
+}, {
+    "class": 7936,
+    "id": "00:06:66:4D:00:00",
+    "address": "00:06:66:4D:00:00",
+    "name": "RN42"
+}]
+success_cb(devices);        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- __success__: Success callback function that is invoked when the connection is successful. [optional]
+- __failure__: Error callback function, invoked when error occurs. [optional]
+
+## list
+
+Lists bonded devices
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">list</span>(success, failure);
+
+### Description
+
+#### Android
+
+Function `list` lists the paired Bluetooth devices.  The success callback is called with a list of objects.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.read" id="apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.read">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>read
+        <span class="apidocSignatureSpan">(success_cb, fail_cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">read = function (success_cb, fail_cb) {
+    btlog("bluetoothSerial.read: " + buf.output);
+    var data = buf.output;
+    buf.output = "";
+    success_cb(data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        console.log("There are " + numBytes + " available to read.");
+    }, failure);
+
+## read
+
+Reads data from the buffer.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">read</span>(success, failure);
+
+### Description
+
+Function `read` reads the data from the buffer. The data is passed to the success callback as a String.  Calling `read` when no
+data is available will pass an empty String to the callback.
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.readRSSI" id="apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.readRSSI">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>readRSSI
+        <span class="apidocSignatureSpan">(success_cb, fail_cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readRSSI = function (success_cb, fail_cb) {
+    alert("bluetoothSerial.readRSSI is not implemented");
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        }
+    );
+
+## readRSSI
+
+Reads the RSSI from the connected peripheral.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">readRSSI</span>(success, failure);
+
+### Description
+
+Function `readRSSI` calls the success callback with the rssi.
+
+**BLE only** *This function is experimental and the API may change*
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.readUntil" id="apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.readUntil">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>readUntil
+        <span class="apidocSignatureSpan">(delimiter, success_cb, fail_cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readUntil = function (delimiter, success_cb, fail_cb) {
+    btlog("bluetoothSerial.readUntil");
+    var index = buf.output.indexOf(delimiter);
+    if (index == -1) {
+        success_cb("");
+    } else {
+        var data = buf.output.substr(0, index+subscribe_delim.length);
+        buf.output = buf.output.substr(index+subscribe_delim.length);
+        success_cb(data);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        console.log(data);
+    }, failure);
+
+## readUntil
+
+Reads data from the buffer until it reaches a delimiter.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">readUntil</span>('\n', success, failure);
+
+### Description
+
+Function `readUntil` reads the data from the buffer until it reaches a delimiter.  The data is passed to the success callback as
+ a String.  If the buffer does not contain the delimiter, an empty String is passed to the callback. Calling `read` when no data
+ is available will pass an empty String to the callback.
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.register" id="apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.register">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>register
+        <span class="apidocSignatureSpan">(data_cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">register = function (data_cb) {
+    interval = window.setInterval(timer_cb, 100);
+    process_cb = data_cb;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Code from PhracturedBlue https://github.com/don/BluetoothSerial/issues/115
+
+// When using the browser, it is necessary to have a processing function that
+// can emulate the bluetooth device.
+
+// Use the 'register' function as follows:
+//
+// bluetoothSerial.<span class="apidocCodeKeywordSpan">register</span>(function(buf) {
+//      //buf.input is the data that was received via bluetoothSerial.write
+//      //buf.output is data that will be transmitted via a bluetoothSerial.read or subscribe
+//      //Do processing here
+//      buf.input = ""
+// });
+
+// Function emulates a Bluetooth device echoing back input
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.showBluetoothSettings" id="apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.showBluetoothSettings">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>showBluetoothSettings
+        <span class="apidocSignatureSpan">(success_cb, fail_cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">showBluetoothSettings = function (success_cb, fail_cb) {
+    alert("bluetoothSerial.showBluetoothSettings is not implemented");
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        }
+    );
+
+## showBluetoothSettings
+
+Show the Bluetooth settings on the device.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">showBluetoothSettings</span>(success, failure);
+
+### Description
+
+Function `showBluetoothSettings` opens the Bluetooth settings on the operating systems.
+
+#### iOS
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.subscribe" id="apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.subscribe">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>subscribe
+        <span class="apidocSignatureSpan">(delimiter, success_cb, fail_cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">subscribe = function (delimiter, success_cb, fail_cb) {
+    btlog("bluetoothSerial.subscribe '"+delimiter+"'");
+    subscribe_cb = success_cb;
+    subscribe_delim = delimiter;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        console.log(data);
+    }, failure);
+
+## subscribe
+
+Subscribe to be notified when data is received.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">subscribe</span>('\n', success, failure);
+
+### Description
+
+Function `subscribe` registers a callback that is called when data is received.  A delimiter must be specified.  The callback is
+ called with the data as soon as the delimiter string is read.  The callback is a long running callback and will exist until `unsubscribe
+` is called.
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.subscribeRawData" id="apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.subscribeRawData">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>subscribeRawData
+        <span class="apidocSignatureSpan">(success_cb, fail_cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">subscribeRawData = function (success_cb, fail_cb) {
+    btlog("bluetoothSerial.subscribeRawData");
+    raw_cb = success_cb;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    bluetoothSerial.unsubscribe();
+
+## subscribeRawData
+
+Subscribe to be notified when data is received.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">subscribeRawData</span>(success, failure);
+
+### Description
+
+Function `subscribeRawData` registers a callback that is called when data is received. The callback is called immediately when data
+ is received. The data is sent to callback as an ArrayBuffer. The callback is a long running callback and will exist until `unsubscribeRawData
+` is called.
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.unsubscribe" id="apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.unsubscribe">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>unsubscribe
+        <span class="apidocSignatureSpan">(success_cb, fail_cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unsubscribe = function (success_cb, fail_cb) {
+    btlog("bluetoothSerial.unsubscribe");
+    subscribe_delim = false;
+    if(success_cb) { success_cb(); }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        console.log(data);
+    }, failure);
+
+## unsubscribe
+
+Unsubscribe from a subscription.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">unsubscribe</span>(success, failure);
+
+### Description
+
+Function `unsubscribe` removes any notification added by `subscribe` and kills the callback.
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.unsubscribeRawData" id="apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.unsubscribeRawData">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>unsubscribeRawData
+        <span class="apidocSignatureSpan">(success_cb, fail_cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unsubscribeRawData = function (success_cb, fail_cb) {
+    btlog("bluetoothSerial.unsubscribeRawData");
+    raw_cb = false;
+    if(success_cb) { success_cb(); }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        console.log(bytes);
+    }, failure);
+
+## unsubscribeRawData
+
+Unsubscribe from a subscription.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">unsubscribeRawData</span>(success, failure);
+
+### Description
+
+Function `unsubscribeRawData` removes any notification added by `subscribeRawData` and kills the callback.
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.write" id="apidoc.element.cordova-plugin-bluetooth-serial.bluetoothSerial.write">
+        function <span class="apidocSignatureSpan">cordova-plugin-bluetooth-serial.bluetoothSerial.</span>write
+        <span class="apidocSignatureSpan">(data, success_cb, fail_cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">write = function (data, success_cb, fail_cb) {
+    btlog("bluetoothSerial.write: " + data);
+    buf.input += data;
+    if(success_cb) { success_cb(); }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- __success__: Success callback function that is invoked after the connection is disconnected. [optional]
+- __failure__: Error callback function, invoked when error occurs. [optional]
+
+## write
+
+Writes data to the serial port.
+
+    bluetoothSerial.<span class="apidocCodeKeywordSpan">write</span>(data, success, failure);
+
+### Description
+
+Function `write` data to the serial port. Data can be an ArrayBuffer, string, array of integers, or a Uint8Array.
+
+Internally string, integer array, and Uint8Array are converted to an ArrayBuffer. String conversion assume 8bit characters.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
